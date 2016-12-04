@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
-public class Bunches {
+public class Bunches implements IBunch {
     private ArrayList<Flower> Flowers = new ArrayList<Flower>();
 
     public void add(Flower f) {
         Flowers.add(f);
     }
 
-    protected ArrayList<Flower> getFlowers() {
+    public ArrayList<Flower> getFlowers() {
         return Flowers;
     }
 }
