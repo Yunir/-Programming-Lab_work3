@@ -1,7 +1,7 @@
 public class Human {
     String Name;
-    Place place = new Place("пустота");
-    Human(String n, Place p) {
+    APlace place;
+    Human(String n, APlace p) {
         Name = n;
         place = p;
     }
@@ -23,7 +23,7 @@ public class Human {
         }
     }
 
-    void walk(Place h){
+    void walk(APlace h){
         place = h;
         System.out.println(Name + " пошагал на место: " + place.getPlace());
     }

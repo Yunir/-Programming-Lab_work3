@@ -1,10 +1,5 @@
-public class Place {
-    String PlaceS;
+public class Place extends APlace {
     Place(String s) {
-        PlaceS = s;
-    }
-
-    String getPlace() {
-        return PlaceS;
+        super(s);
     }
 }
