@@ -1,6 +1,3 @@
-/**
- * Created by Yunicoed on 04.12.2016.
- */
 public class Flower {
     String Type = "травушка";
     Planets BornLocation;

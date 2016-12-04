@@ -17,22 +17,24 @@ public class Fairytale {
         worker_Ficks.punch(dontKnow, hill);
         worker_Ficks.walk(hill); System.out.println();
 
+        Bunches bunch = new Bunches();
         Place house = new Place("дом с верандой");
         Flower margar = new Flower("маргаритки", Planets.Moon);
         Flower siren = new Flower("сирени", Planets.Moon);
         Flower anut = new Flower("анютины глазки", Planets.Moon);
         Flower nastur = new Flower("настурции", Planets.Moon);
         Flower astrs = new Flower("астры", Planets.Moon);
-        house.decorOfPlace.addFlowerToBunches(margar);
-        house.decorOfPlace.addFlowerToBunches(siren);
-        house.decorOfPlace.addFlowerToBunches(anut);
-        house.decorOfPlace.addFlowerToBunches(nastur);
-        house.decorOfPlace.addFlowerToBunches(astrs);
+        Decor decoration = new Decor();
+        decoration.addFlowerToBunches(bunch, margar);
+        decoration.addFlowerToBunches(bunch, siren);
+        decoration.addFlowerToBunches(bunch, anut);
+        decoration.addFlowerToBunches(bunch, nastur);
+        decoration.addFlowerToBunches(bunch, astrs);
 
         if( dontKnow.investigate() ) {
             dontKnow.walk(house);
-            house.decorOfPlace.showFlowersInTheBunch();
-            dontKnow.nostalgia();
+            decoration.showFlowersInTheBunch(bunch);
+            dontKnow.nostalgia(Planets.Moon);
         }
 
     }
