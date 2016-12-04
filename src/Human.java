@@ -1,5 +1,5 @@
-public class Human {
-    String Name;
+public class Human implements IHuman {
+    private String Name;
     APlace place;
     Human(String n, APlace p) {
         Name = n;
@@ -23,8 +23,12 @@ public class Human {
         }
     }
 
-    void walk(APlace h){
+    public void walk(APlace h){
         place = h;
         System.out.println(Name + " пошагал на место: " + place.getPlace());
+    }
+
+    public String getName() {
+        return Name;
     }
 }
