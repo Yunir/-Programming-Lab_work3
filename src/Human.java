@@ -1,6 +1,6 @@
 import javax.lang.model.element.Name;
 
-public class Human implements IHuman {
+public class Human implements IHuman, IStandardFunc {
     private String Name;
     APlace place;
     Human(String n, APlace p) {
@@ -9,8 +9,19 @@ public class Human implements IHuman {
     }
 
     @Override
+    public int hashCode() {
+        return super.hashCode()+Name.hashCode();
+    }
+
+    @Override
     public boolean equals(Object obj) {
-        return place.getPlace()==obj;
+        boolean comp = obj.hashCode()== this.hashCode() ? true : false;
+        return comp;
+    }
+
+    @Override
+    public String toString() {
+        return Name + " находится на месте: " + place.getPlace();
     }
 
     void nostalgia(Planets p) {
@@ -19,7 +30,7 @@ public class Human implements IHuman {
     }
 
     boolean investigate(){
-        if (equals("холм")) {
+        if (place.getPlace()=="холм") {
             System.out.print("Вау, какой красивый двухэтажный дом с верандой!");
             System.out.println(" - сказал " + Name);
             return true;

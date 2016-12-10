@@ -1,11 +1,5 @@
-public class Flower {
-    String Type = "травушка";
-    Planets BornLocation;
+public class Flower extends AFlower {
     Flower(String name, Planets p) {
-        Type = name;
-        BornLocation = p;
-    }
-    String getType() {
-        return Type;
+        super(name, p);
     }
 }

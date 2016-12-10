@@ -37,5 +37,11 @@ public class Fairytale {
             dontKnow.nostalgia(Planets.Moon);
         }
 
+        System.out.println("\nОбзор объектов, участвующие в игре: ");
+        System.out.println(worker_1.toString());
+        System.out.println(worker_2.toString());
+        System.out.println(worker_Ficks.toString());
+        System.out.println(dontKnow.toString());
+        System.out.println(bunch.toString());
     }
 }

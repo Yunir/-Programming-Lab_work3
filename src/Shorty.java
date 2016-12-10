@@ -1,29 +1,30 @@
 public class Shorty extends Human {
     int height;
-    int iq;
-    int magic_iq;
+
+    public int getIq() {
+        return iq;
+    }
+
+    private int iq;
     AThing inHands;
 
-    @Override
-    public int hashCode() {
-        return 100+this.iq;
-    }
 
     Shorty(String n, int h, int intel, APlace p) {
         super(n, p);
         height = h;
         iq = intel;
-        magic_iq = this.hashCode();
     }
 
     @Override
     public String toString() {
-        return super.getName() + " с iq " + this.iq;
+        return (super.toString()
+                + " с iq: "
+                + getIq());
     }
 
     void grab(AThing t){
         inHands = t;
-        System.out.println(this.toString() + " взял в руки объект " + inHands.getType());
+        System.out.println(this.getName() + " взял в руки объект " + inHands.getType());
     }
 
     void work() {
