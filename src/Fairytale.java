@@ -1,14 +1,14 @@
 public class Fairytale {
     public static void main(String[] args) {
         System.out.println();
-        Place plainMoon = new Place("поле на Луне");
-        Place hill = new Place("холм");
+        Place plainMoon = new Place("РїРѕР»Рµ РЅР° Р›СѓРЅРµ");
+        Place hill = new Place("С…РѕР»Рј");
 
-        Shorty worker_1 = new Shorty("Димитрий", 143, 99, plainMoon);
-        Shorty worker_2 = new Shorty("Володя", 124, 129, plainMoon);
-        Shorty worker_Ficks = new Shorty("Фикс", 154, 181, plainMoon);
-        Shorty dontKnow = new Shorty("Незнайка", 154, 181, plainMoon);
-        Thing showel = new Thing("метла");
+        Shorty worker_1 = new Shorty("Р”РёРјРёС‚СЂРёР№", 143, 99, plainMoon);
+        Shorty worker_2 = new Shorty("Р’РѕР»РѕРґСЏ", 124, 129, plainMoon);
+        Shorty worker_Ficks = new Shorty("Р¤РёРєСЃ", 154, 181, plainMoon);
+        Shorty dontKnow = new Shorty("РќРµР·РЅР°Р№РєР°", 154, 181, plainMoon);
+        Thing showel = new Thing("РјРµС‚Р»Р°");
 
         worker_1.work();
         worker_2.work(); System.out.println();
@@ -18,12 +18,12 @@ public class Fairytale {
         worker_Ficks.walk(hill); System.out.println();
 
         Bunches bunch = new Bunches();
-        Place house = new Place("дом с верандой");
-        Flower margar = new Flower("маргаритки", Planets.Moon);
-        Flower siren = new Flower("сирени", Planets.Moon);
-        Flower anut = new Flower("анютины глазки", Planets.Moon);
-        Flower nastur = new Flower("настурции", Planets.Moon);
-        Flower astrs = new Flower("астры", Planets.Moon);
+        Place house = new Place("РґРѕРј СЃ РІРµСЂР°РЅРґРѕР№");
+        Flower margar = new Flower("РјР°СЂРіР°СЂРёС‚РєРё", Planets.Moon);
+        Flower siren = new Flower("СЃРёСЂРµРЅРё", Planets.Moon);
+        Flower anut = new Flower("Р°РЅСЋС‚РёРЅС‹ РіР»Р°Р·РєРё", Planets.Moon);
+        Flower nastur = new Flower("РЅР°СЃС‚СѓСЂС†РёРё", Planets.Moon);
+        Flower astrs = new Flower("Р°СЃС‚СЂС‹", Planets.Moon);
         Decor decoration = new Decor();
         decoration.addFlowerToBunches(bunch, margar);
         decoration.addFlowerToBunches(bunch, siren);
@@ -37,7 +37,7 @@ public class Fairytale {
             dontKnow.nostalgia(Planets.Moon);
         }
 
-        System.out.println("\nОбзор объектов, участвующие в игре: ");
+        System.out.println("\nРћР±Р·РѕСЂ РѕР±СЉРµРєС‚РѕРІ, СѓС‡Р°СЃС‚РІСѓСЋС‰РёРµ РІ РёРіСЂРµ: ");
         System.out.println(worker_1.toString());
         System.out.println(worker_2.toString());
         System.out.println(worker_Ficks.toString());

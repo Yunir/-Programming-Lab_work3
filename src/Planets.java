@@ -1,6 +1,6 @@
 enum Planets {
-    Earth("Земля"),
-    Moon("Луна");
+    Earth("Р—РµРјР»СЏ"),
+    Moon("Р›СѓРЅР°");
 
     private final String Type;
     Planets(String t) {
