@@ -1,13 +1,11 @@
-public class Shorty extends Human {
-    int height;
+class Shorty extends Human {
+    private int height;
+    private int iq;
+    private AThing inHands;
 
-    public int getIq() {
+    private int getIq() {
         return iq;
     }
-
-    private int iq;
-    AThing inHands;
-
 
     Shorty(String n, int h, int intel, APlace p) {
         super(n, p);

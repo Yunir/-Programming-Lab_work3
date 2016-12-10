@@ -1,5 +1,5 @@
-abstract public class APlace {
-    String PlaceS;
+abstract class APlace {
+    private String PlaceS;
     APlace(String s) {
         PlaceS = s;
     }
