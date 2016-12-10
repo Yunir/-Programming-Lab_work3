@@ -1,6 +1,6 @@
 import javax.lang.model.element.Name;
 
-public class Human implements IHuman, IStandardFunc {
+class Human implements IHuman, IStandardFunc {
     private String Name;
     APlace place;
     Human(String n, APlace p) {
@@ -21,29 +21,29 @@ public class Human implements IHuman, IStandardFunc {
 
     @Override
     public String toString() {
-        return Name + " находится на месте: " + place.getPlace();
+        return Name + " РЅР°С…РѕРґРёС‚СЃСЏ РЅР° РјРµСЃС‚Рµ: " + place.getPlace();
     }
 
     void nostalgia(Planets p) {
         if(p == Planets.Moon)
-            System.out.println("\nСкучаю я по земным цветам - сказал " + Name);
+            System.out.println("\nРЎРєСѓС‡Р°СЋ СЏ РїРѕ Р·РµРјРЅС‹Рј С†РІРµС‚Р°Рј - СЃРєР°Р·Р°Р» " + Name);
     }
 
     boolean investigate(){
-        if (place.getPlace()=="холм") {
-            System.out.print("Вау, какой красивый двухэтажный дом с верандой!");
-            System.out.println(" - сказал " + Name);
+        if (place.getPlace()=="С…РѕР»Рј") {
+            System.out.print("Р’Р°Сѓ, РєР°РєРѕР№ РєСЂР°СЃРёРІС‹Р№ РґРІСѓС…СЌС‚Р°Р¶РЅС‹Р№ РґРѕРј СЃ РІРµСЂР°РЅРґРѕР№!");
+            System.out.println(" - СЃРєР°Р·Р°Р» " + Name);
             return true;
         } else {
-            System.out.print("Тут ничего интересного");
-            System.out.println(" - сказал " + Name);
+            System.out.print("РўСѓС‚ РЅРёС‡РµРіРѕ РёРЅС‚РµСЂРµСЃРЅРѕРіРѕ");
+            System.out.println(" - СЃРєР°Р·Р°Р» " + Name);
             return false;
         }
     }
 
     public void walk(APlace h){
         place = h;
-        System.out.println(Name + " пошагал на место: " + place.getPlace());
+        System.out.println(Name + " РїРѕС€Р°РіР°Р» РЅР° РјРµСЃС‚Рѕ: " + place.getPlace());
     }
 
     public String getName() {

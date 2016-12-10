@@ -7,7 +7,7 @@ class Decor implements IStandardFunc {
     }
 
     void showFlowersInTheBunch(IBunch b) {
-        System.out.println("Вокруг были разбиты клумбы с цветами с планеты " + planet.toString() + ": ");
+        System.out.println("Р’РѕРєСЂСѓРі Р±С‹Р»Рё СЂР°Р·Р±РёС‚С‹ РєР»СѓРјР±С‹ СЃ С†РІРµС‚Р°РјРё СЃ РїР»Р°РЅРµС‚С‹ " + planet.toString() + ": ");
         System.out.print(b.toString());
         System.out.println();
     }

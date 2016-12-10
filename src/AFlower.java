@@ -1,5 +1,5 @@
-abstract public class AFlower {
-    private String Type = "травушка";
+abstract class AFlower {
+    private String Type = "С‚СЂР°РІСѓС€РєР°";
     Planets BornLocation;
     AFlower(String name, Planets p) {
         Type = name;

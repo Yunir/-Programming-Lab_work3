@@ -16,21 +16,21 @@ class Shorty extends Human {
     @Override
     public String toString() {
         return (super.toString()
-                + " с iq: "
+                + " СЃ iq: "
                 + getIq());
     }
 
     void grab(AThing t){
         inHands = t;
-        System.out.println(this.getName() + " взял в руки объект " + inHands.getType());
+        System.out.println(this.getName() + " РІР·СЏР» РІ СЂСѓРєРё РѕР±СЉРµРєС‚ " + inHands.getType());
     }
 
     void work() {
-        System.out.println("Коротышка " + getName() + " начал работать. Место: "+ super.place.getPlace());
+        System.out.println("РљРѕСЂРѕС‚С‹С€РєР° " + getName() + " РЅР°С‡Р°Р» СЂР°Р±РѕС‚Р°С‚СЊ. РњРµСЃС‚Рѕ: "+ super.place.getPlace());
     }
 
     void punch(IHuman s, APlace p) {
-        System.out.println(getName() + " ткнул " + s.getName() + " объектом " + inHands.getType());
+        System.out.println(getName() + " С‚РєРЅСѓР» " + s.getName() + " РѕР±СЉРµРєС‚РѕРј " + inHands.getType());
         s.walk(p);
     }
 }
