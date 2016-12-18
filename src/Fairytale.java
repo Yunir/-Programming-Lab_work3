@@ -42,6 +42,6 @@ public class Fairytale {
         System.out.println(worker_2.toString());
         System.out.println(worker_Ficks.toString());
         System.out.println(dontKnow.toString());
-        System.out.println(bunch.toString());
+        System.out.println("Цветы у веранды: " + bunch.toString());
     }
 }
