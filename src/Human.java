@@ -46,7 +46,17 @@ class Human implements IHuman, IStandardFunc {
         System.out.println(Name + " пошагал на место: " + place.getPlace());
     }
 
-    public String getName() {
-        return Name;
+    public String getName(){
+        try {
+            if(haveName()) return Name;
+            else return "безымянный";
+        } catch (FairytaleException e) {
+            return e.getExc();
+        }
+    }
+
+    public boolean haveName() throws FairytaleException{
+        if (Name==null)throw new FairytaleException("Поле Имя не проинициализировано");
+        return Name.equals("")?false:true;
     }
 }

@@ -1,5 +1,5 @@
 abstract class AThing {
-    private String Type = "ничего";
+    private String Type;
     AThing(String s) {
         Type = s;
     }
