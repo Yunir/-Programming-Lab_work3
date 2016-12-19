@@ -3,7 +3,7 @@ class Shorty extends Human {
     private int iq;
     private int strenght;
     private AThing inHands;
-
+    Skill ShortySkill;
     private int getIq() {
         int normalized = 0;
         try {
@@ -20,6 +20,7 @@ class Shorty extends Human {
         height = h;
         iq = intel;
         this.strenght = strenght;
+        ShortySkill = new Skill(strenght);
     }
 
     @Override
@@ -61,7 +62,7 @@ class Shorty extends Human {
         RealSuperPunch.punchIt();
     }
 
-    Skill ShortySkill = new Skill(strenght);
+
     void tryToWork() {
         ShortySkill.work(super.place.getPlace());
     }

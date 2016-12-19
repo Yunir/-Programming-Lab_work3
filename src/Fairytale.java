@@ -10,13 +10,13 @@ public class Fairytale {
         Shorty dontKnow = new Shorty("Незнайка", 154, 11, plainMoon, 0);
         Thing showel = new Thing("метла");
 
-        new Shorty("Еремей", 151, 7, plainMoon, 8) {
+        new Shorty("Еремей", 151, 7, plainMoon, 5) {
             public void StandartReaction() {
                 this.tryToWork();
             }
         }.StandartReaction();
         new Shorty("Димитрий", 143, 9, plainMoon, 11){}.tryToWork();
-        Shorty worker = new Shorty("Володя", 124, 10, plainMoon, 15) {
+        Shorty worker = new Shorty("Володя", 124, 10, plainMoon, 1) {
             @Override
             void tryToWork() {
                 super.tryToWork();
