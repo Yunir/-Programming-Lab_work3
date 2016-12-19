@@ -10,8 +10,8 @@ public class Bunches implements IBunch, IStandardFunc {
     public ArrayList<AFlower> getFlowers(){
         try {
             if (haveAnyFlower()) return Flowers;
-            else throw new FairytaleException("Цветов в охапке нет");
-        } catch (FairytaleException e) {
+            else throw new ExistException("Цветы", " - в охапке нет");
+        } catch (ExistException e) {
             e.printStackTrace();
             return Flowers;
         }
