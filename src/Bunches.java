@@ -7,9 +7,17 @@ public class Bunches implements IBunch, IStandardFunc {
         Flowers.add(f);
     }
 
-    public ArrayList<AFlower> getFlowers() {
-        return Flowers;
+    public ArrayList<AFlower> getFlowers(){
+        try {
+            if (haveAnyFlower()) return Flowers;
+            else throw new ExistException("Цветы", " - в охапке нет");
+        } catch (ExistException e) {
+            e.printStackTrace();
+            return Flowers;
+        }
     }
+
+    public boolean haveAnyFlower() {return Flowers.size()>0?true:false;}
 
     @Override
     public int hashCode() {

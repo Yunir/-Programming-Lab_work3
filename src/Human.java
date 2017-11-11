@@ -21,7 +21,14 @@ class Human implements IHuman, IStandardFunc {
 
     @Override
     public String toString() {
-        return Name + " находится на месте: " + place.getPlace();
+        try {
+            if (place==null) throw new ExistException();
+        } catch (ExistException e) {
+            e.printStackTrace();
+            place = new Place("неизвестно");
+        } finally {
+            return Name + " находится на месте: " + place.getPlace();
+        }
     }
 
     void nostalgia(Planets p) {
@@ -46,7 +53,22 @@ class Human implements IHuman, IStandardFunc {
         System.out.println(Name + " пошагал на место: " + place.getPlace());
     }
 
-    public String getName() {
-        return Name;
+    public String getName(){
+        try {
+            if(haveName()) return Name;
+            else {
+                throw new CorrectNameException("имени нет");
+            }
+        } catch (ExistException e) {
+            return e.getExc();
+        } catch (CorrectNameException exc) {
+            exc.printStackTrace();
+            return "безымянный";
+        }
+    }
+
+    public boolean haveName() throws ExistException{
+        if (Name==null)throw new ExistException("Поле Имя");
+        return Name.equals("")?false:true;
     }
 }
