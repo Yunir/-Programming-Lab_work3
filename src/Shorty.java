@@ -67,16 +67,5 @@ class Shorty extends Human {
         ShortySkill.work(super.place.getPlace());
     }
 
-    class Skill {
-        boolean abilityToWork;
-        Skill(int power) {
-            if(power > 9) abilityToWork = true;
-            else abilityToWork = false;
-        }
 
-        void work(String p) {
-            if (abilityToWork) System.out.println("Коротышка " + getName() + " начал работать. Место: "+ p);
-            else System.out.println("Коротышка "+ getName() + " не способен работать");
-        }
-    }
 }
